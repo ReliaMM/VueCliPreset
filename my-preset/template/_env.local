@@ -1,0 +1,2 @@
+OUTPUT_DIR=../../../public/static
+VIEWS_PATH=../../../resources/views

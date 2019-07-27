@@ -1,0 +1,17 @@
+{
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      <%_ if (options.modern === 'universal') { _%>
+      "index/*": ["./src/app/index/*"],
+      "admin/*": ["./src/app/admin/*"],
+      <%_ } _%>
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

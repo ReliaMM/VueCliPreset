@@ -1,0 +1,12 @@
+import Vue from 'vue'
+
+import {
+  Button,
+  Message,
+  MessageBox
+} from 'element-ui'
+
+Vue.prototype.$ELEMENT = { size: '<%= options.elementSize %>', zIndex: 3000 }
+Vue.prototype.$Message = Message
+Vue.prototype.$msgbox = MessageBox
+Vue.use(Button)

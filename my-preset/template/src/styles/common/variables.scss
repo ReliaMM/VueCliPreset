@@ -1,0 +1,29 @@
+
+// variables
+<%_ if (options.theme) { _%>
+@import '@/lib/element-variables.scss';
+<%_ } else { _%>
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+<%_ } _%>
+
+$--body-background-color: #ecf0f5;
+
+$--btn-reset-color: #79715c;
+
+$--color-white: #fff;
+$--color-link: #6D83BC;
+
+$--color-warning-text: #EB6969;
+
+$--font-primary: #414957;
+
+$--border-color-base: #eee;
+$--border-color-light-1: #e0e3e9;
+
+$--color-text-info: #ccc;
+$--color-primary:  #27D38A;
+$--color-text-primary:  #687284;
+
+$--color-menu-default: #959ca8;
+$--color-menu-active: $--color-primary;

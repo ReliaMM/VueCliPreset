@@ -1,0 +1,94 @@
+.text {
+  &-primary {
+    color: $--color-primary;
+  }
+  &-success {
+    color: $--color-success;
+  }
+  &-danger {
+    color: $--color-danger;
+  }
+  &-warning {
+    color: $--color-warning;
+  }
+}
+
+.link {
+  $list: (
+    default: $--color-info,
+    primary: $--color-primary,
+    success: $--color-success,
+    danger: $--color-danger,
+    warning: $--color-warning,
+    info: $--color-text-info
+  );
+  @each $key, $value in $list {
+    &--#{$key} {
+      color: $value;
+      &:hover,
+      &:focus,
+      &:active {
+        color: mix($value, $--color-white, 80%);
+      }
+      &.disabled {
+        color: #c0c4cc;
+        cursor: not-allowed;
+        &:hover,
+        &:focus,
+        &:active {
+          color: #c0c4cc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.a_link {
+  color: $--color-primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: mix($--color-primary, $--color-white, 80%);
+  }
+}
+
+.error-message {
+  margin-left: 5px;
+}
+
+.splitline {
+  display: inline-block;
+  margin: 0 10px;
+  width: 0;
+  height: 0;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 0.769em;
+    line-height: 0.769em;
+    background-color: $--color-text-primary;
+    vertical-align: middle;
+  }
+}
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.asterisk:before {
+  content: '*';
+  display: inline;
+  margin-right: 5px;
+  color: $--color-danger;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
