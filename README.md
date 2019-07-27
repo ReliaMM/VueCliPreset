@@ -6,9 +6,10 @@ vue create --preset ./my-preset my-project
 - spa
 - webapp
 
-
+```shell
 vue create --preset gitlab:username/repo --clone my-project
 vue create --preset bitbucket:username/repo --clone my-project
 # 自托管的 repo
 vue create --preset gitlab:my-gitlab-server.com:group/projectname --clone my-project
 vue create --preset direct:ssh://git@my-gitlab-server.com/group/projectname.git --clone my-project
+```
